@@ -36,13 +36,13 @@ rf = RandomForestRegressor(random_state=42)
 random_search = RandomizedSearchCV(
     rf,
     param_distributions=params,
-    n_iter=50
+    n_iter=50,
     scoring='r2',
     cv=5,
     random_state=42,
     n_jobs=-1,
     verbose=0
-    )
+)
 
 
 random_search.fit(X_train, y_train)
